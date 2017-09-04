@@ -1,0 +1,118 @@
+html {
+  background-color: black;
+}
+
+body{
+  background-color: white;
+  margin: 0;
+}
+a {
+    color: #243d51;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+ul {
+    list-style: none;
+    margin-bottom: 1em;
+}
+
+h1 {
+    padding: 2em 0 1em 0;
+    color: #243d51;
+}
+
+h2 {
+    padding-top: 1em;
+    margin-bottom: 1em;
+    color: #243d51;
+}
+
+h3 {
+    padding-top: 1em;
+    margin-bottom: 1em;
+    color: #243d51;
+}
+
+p {
+    margin-bottom: 1em;
+}
+
+.header-wrap {
+    display: -webkit-box;
+    padding: 1.5em;
+    background-color: #fff;
+    border-bottom: 5px solid #243d51;
+}
+
+.navbar a {
+    color: #243d51;
+    font-weight: 700;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+}
+
+.logo {
+    font-size: 2em;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.logo:hover {
+    text-decoration: none;
+}
+
+.navbar {
+    min-width: 40%;
+    margin: 0 auto;
+}
+
+.navbar ul {
+    margin-bottom: 0;
+}
+
+.navbar ul li {
+  padding-right: 1em;
+  display: inline;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+}
+
+.main-wrap {
+  min-height: 60vh;
+}
+
+.main {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.site-footer {
+    text-align: center;
+    padding: 2.5em;
+    border-top: 1px solid #ccc;
+    background-color: black;
+    color: #fff;
+}
+
+.site-footer a {
+    color: #fff;
+}
+
+.me {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.me img {
+  width: 70%;
+  border: 5px solid #243d51;
+}
