@@ -352,57 +352,6 @@
         ]
     },
     {
-        "name": "anax/view",
-        "version": "v1.0.15",
-        "version_normalized": "1.0.15.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/canax/view.git",
-            "reference": "f7ec49342915610560e931887cd33d0891693c6b"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/canax/view/zipball/f7ec49342915610560e931887cd33d0891693c6b",
-            "reference": "f7ec49342915610560e931887cd33d0891693c6b",
-            "shasum": ""
-        },
-        "require": {
-            "anax/common": "^1.0",
-            "anax/configure": "^1.0",
-            "anax/di": "^1.0",
-            "php": ">=5.6"
-        },
-        "time": "2017-08-15T12:45:30+00:00",
-        "type": "library",
-        "installation-source": "dist",
-        "autoload": {
-            "psr-4": {
-                "Anax\\": "src/"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "Mikael Roos",
-                "email": "mos@dbwebb.se",
-                "homepage": "https://dbwebb.se",
-                "role": "Developer"
-            }
-        ],
-        "description": "Anax View module.",
-        "homepage": "https://dbwebb.se/anax",
-        "keywords": [
-            "boilerplate",
-            "education",
-            "framework",
-            "micro",
-            "mvc"
-        ]
-    },
-    {
         "name": "anax/session",
         "version": "v1.0.3",
         "version_normalized": "1.0.3.0",
@@ -824,6 +773,122 @@
             "gd",
             "image",
             "imageprocessing"
+        ]
+    },
+    {
+        "name": "anax/view",
+        "version": "v1.0.17",
+        "version_normalized": "1.0.17.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/canax/view.git",
+            "reference": "5b39413d1c647fd39150f46c15a7894ab45ad208"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/canax/view/zipball/5b39413d1c647fd39150f46c15a7894ab45ad208",
+            "reference": "5b39413d1c647fd39150f46c15a7894ab45ad208",
+            "shasum": ""
+        },
+        "require": {
+            "anax/common": "^1.0",
+            "anax/configure": "^1.0",
+            "anax/di": "^1.0",
+            "php": ">=5.6"
+        },
+        "time": "2017-09-07T06:07:14+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Anax\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Mikael Roos",
+                "email": "mos@dbwebb.se",
+                "homepage": "https://dbwebb.se",
+                "role": "Developer"
+            }
+        ],
+        "description": "Anax View module.",
+        "homepage": "https://dbwebb.se/anax",
+        "keywords": [
+            "boilerplate",
+            "education",
+            "framework",
+            "micro",
+            "mvc"
+        ]
+    },
+    {
+        "name": "mos/ctextfilter",
+        "version": "v1.2.20",
+        "version_normalized": "1.2.20.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/mosbth/ctextfilter.git",
+            "reference": "f324263f13fdc931982648443bb54da8ce5ad0c6"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/mosbth/ctextfilter/zipball/f324263f13fdc931982648443bb54da8ce5ad0c6",
+            "reference": "f324263f13fdc931982648443bb54da8ce5ad0c6",
+            "shasum": ""
+        },
+        "require": {
+            "ezyang/htmlpurifier": "4.*",
+            "michelf/php-markdown": "1.6.*",
+            "michelf/php-smartypants": "1.6.*",
+            "php": ">=5.4",
+            "scrivo/highlight.php": "^9.0"
+        },
+        "suggest": {
+            "ext-json": "*",
+            "ext-yaml": "*",
+            "mustangostang/spyc": "^0.6",
+            "symfony/yaml": "^3.1"
+        },
+        "time": "2017-02-06T23:08:34+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "1.2.x-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Mos\\TextFilter\\": "src/TextFilter"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Mikael Roos",
+                "email": "mos@dbwebb.se",
+                "homepage": "http://mikaelroos.se",
+                "role": "Developer"
+            }
+        ],
+        "description": "PHP classes for text filtering and formatting to HTML",
+        "homepage": "http://dbwebb.se",
+        "keywords": [
+            "Html Purifier",
+            "YAML front matter",
+            "bbcode",
+            "education",
+            "json front matter",
+            "markdown",
+            "shortcode"
         ]
     }
 ]

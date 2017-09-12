@@ -115,4 +115,43 @@ p {
 .me img {
   width: 70%;
   border: 5px solid #243d51;
+
+}
+
+.commentSection {
+  border: 2px solid black;
+  border-radius: 4px;
+  padding: 1em;
+  margin-top: 1em;
+}
+
+.input {
+  width: 100%;
+  border: 1px solid;
+  border-radius: 2px;
+  border-color: rgb(169, 169, 169);
+}
+
+.formButton {
+  background-color: white;
+  border: 1px solid;
+  border-radius: 4px;
+  padding: 10px;
+}
+
+.comment {
+  border: 1px solid black;
+  border-radius: 4px;
+  margin: 1em;
+  padding: 1em;
+}
+
+.gravatar {
+  float: left;
+  padding: 10px 10px 0 0;
+}
+
+.email {
+  font-weight: bold;
+  font-size: 16px;
 }

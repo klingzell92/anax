@@ -12,6 +12,14 @@ return  [
         "report" => [
             "text" => "Report",
             "route" => "report",
+        ],
+        "comment" => [
+            "text" => "Comment",
+            "route" => "comment",
+        ],
+        "remserver" => [
+            "text" => "Remserver",
+            "route" => "remserver",
         ]
     ]
 ];

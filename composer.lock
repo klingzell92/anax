@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "5126d3acdb2705d996323e6cbb843790",
+    "content-hash": "e70544d7cd5b0cff05fd57f5d8e1fb61",
     "packages": [
         {
             "name": "anax/common",
@@ -452,16 +452,16 @@
         },
         {
             "name": "anax/view",
-            "version": "v1.0.15",
+            "version": "v1.0.17",
             "source": {
                 "type": "git",
                 "url": "https://github.com/canax/view.git",
-                "reference": "f7ec49342915610560e931887cd33d0891693c6b"
+                "reference": "5b39413d1c647fd39150f46c15a7894ab45ad208"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/canax/view/zipball/f7ec49342915610560e931887cd33d0891693c6b",
-                "reference": "f7ec49342915610560e931887cd33d0891693c6b",
+                "url": "https://api.github.com/repos/canax/view/zipball/5b39413d1c647fd39150f46c15a7894ab45ad208",
+                "reference": "5b39413d1c647fd39150f46c15a7894ab45ad208",
                 "shasum": ""
             },
             "require": {
@@ -497,7 +497,7 @@
                 "micro",
                 "mvc"
             ],
-            "time": "2017-08-15T12:45:30+00:00"
+            "time": "2017-09-07T06:07:14+00:00"
         },
         {
             "name": "ezyang/htmlpurifier",
@@ -711,6 +711,69 @@
                 "imageprocessing"
             ],
             "time": "2017-03-30T22:47:55+00:00"
+        },
+        {
+            "name": "mos/ctextfilter",
+            "version": "v1.2.20",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mosbth/ctextfilter.git",
+                "reference": "f324263f13fdc931982648443bb54da8ce5ad0c6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mosbth/ctextfilter/zipball/f324263f13fdc931982648443bb54da8ce5ad0c6",
+                "reference": "f324263f13fdc931982648443bb54da8ce5ad0c6",
+                "shasum": ""
+            },
+            "require": {
+                "ezyang/htmlpurifier": "4.*",
+                "michelf/php-markdown": "1.6.*",
+                "michelf/php-smartypants": "1.6.*",
+                "php": ">=5.4",
+                "scrivo/highlight.php": "^9.0"
+            },
+            "suggest": {
+                "ext-json": "*",
+                "ext-yaml": "*",
+                "mustangostang/spyc": "^0.6",
+                "symfony/yaml": "^3.1"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.2.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Mos\\TextFilter\\": "src/TextFilter"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Mikael Roos",
+                    "email": "mos@dbwebb.se",
+                    "homepage": "http://mikaelroos.se",
+                    "role": "Developer"
+                }
+            ],
+            "description": "PHP classes for text filtering and formatting to HTML",
+            "homepage": "http://dbwebb.se",
+            "keywords": [
+                "Html Purifier",
+                "YAML front matter",
+                "bbcode",
+                "education",
+                "json front matter",
+                "markdown",
+                "shortcode"
+            ],
+            "time": "2017-02-06T23:08:34+00:00"
         },
         {
             "name": "scrivo/highlight.php",
