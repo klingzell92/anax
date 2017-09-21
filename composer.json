@@ -1,6 +1,9 @@
 {
     "autoload": {
-      "psr-4": {"Anax\\": "src/"}
+      "psr-4": {"Anax\\": "src/"},
+      "files": [
+          "src/functions.php"
+      ]
     },
     "require": {
         "anax/request": "^1.0",
@@ -12,6 +15,9 @@
         "anax/configure": "^1.0",
         "anax/textfilter": "^1.0",
         "symfony/yaml": "^3.3",
-        "mos/cimage": "^0.7.19"
+        "mos/cimage": "^0.7.19",
+        "mos/ctextfilter": "^1.2",
+        "anax/di": "^1.0",
+        "anax/page": "^1.0"
     }
 }

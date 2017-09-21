@@ -22,10 +22,21 @@ return [
             "file" => __DIR__ . "/route2/flat-file-content.php",
         ],
         [
+            // Comment routes
+            "mount" => "comment",
+            "file" => __DIR__ . "/route2/comment.php",
+        ],
+        [
+            // Keep this last since its a catch all
+            "mount" => "api",
+            "file" => __DIR__ . "/route2/remserver.php",
+        ],
+        [
             // Keep this last since its a catch all
             "mount" => null,
             "file" => __DIR__ . "/route2/404.php",
         ],
+
     ],
 
 ];

@@ -9,7 +9,7 @@ use \Anax\Configure\ConfigureTrait;
  * DI factory class creating a set of default services by loading
  * them from a configuration file.
  */
-class DIFactoryConfig extends DI implements ConfigureInterface, DIInterface
+class DIFactoryConfig extends DI implements ConfigureInterface
 {
     use ConfigureTrait;
 

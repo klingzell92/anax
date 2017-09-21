@@ -17,8 +17,8 @@ class DI implements DIInterface
      * @var array $active  A service is instantiated into this array,
      *                     once its accessed.
      */
-    public $loaded = [];
-    public $active = [];
+    protected $loaded = [];
+    protected $active = [];
 
 
 
@@ -108,9 +108,7 @@ class DI implements DIInterface
      */
     public function has($service)
     {
-        return isset($this->loaded[$service])
-            ? true
-            : false;
+        return isset($this->loaded[$service]);
     }
 
 
@@ -178,56 +176,4 @@ class DI implements DIInterface
     {
         return array_keys($this->active);
     }
-
-
-
-    /**
-     * Return an array with all loaded services that are controllers.
-     *
-     * @return void
-     */
-/*
-    public function getControllers()
-    {
-        return array_filter(
-            array_keys($this->loaded),
-            function ($val) {
-                return strpos($val, "Controller") !== false;
-            }
-        );
-    }
-*/
-
-
-    /**
-     * Magic method to get and create services.
-     * When created it is also stored as a parameter of this object.
-     *
-     * @param string $service name of class property not existing.
-     *
-     * @return class as the service requested.
-     */
-/*    
-    public function __get($service)
-    {
-        return $this->get($service);
-    }
-*/
-
-
-    /**
-     * Magic method to get and create services.
-     * When created it is also stored as a parameter of this object.
-     *
-     * @param string $service   name of class property not existing.
-     * @param array  $arguments currently NOT USED.
-     *
-     * @return class as the service requested.
-     */
-/*
-    public function __call($service, $arguments = [])
-    {
-        return $this->get($service);
-    }
-*/
 }

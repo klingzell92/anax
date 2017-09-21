@@ -7,5 +7,6 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Symfony\\Component\\Yaml\\' => array($vendorDir . '/symfony/yaml'),
-    'Anax\\' => array($baseDir . '/src', $vendorDir . '/anax/request/src', $vendorDir . '/anax/common/src', $vendorDir . '/anax/url/src', $vendorDir . '/anax/configure/src', $vendorDir . '/anax/di/src', $vendorDir . '/anax/router/src', $vendorDir . '/anax/response/src', $vendorDir . '/anax/view/src', $vendorDir . '/anax/session/src', $vendorDir . '/anax/textfilter/src'),
+    'Mos\\TextFilter\\' => array($vendorDir . '/mos/ctextfilter/src/TextFilter'),
+    'Anax\\' => array($baseDir . '/src', $vendorDir . '/anax/request/src', $vendorDir . '/anax/common/src', $vendorDir . '/anax/url/src', $vendorDir . '/anax/configure/src', $vendorDir . '/anax/router/src', $vendorDir . '/anax/response/src', $vendorDir . '/anax/session/src', $vendorDir . '/anax/textfilter/src', $vendorDir . '/anax/view/src', $vendorDir . '/anax/di/src', $vendorDir . '/anax/page/src'),
 );

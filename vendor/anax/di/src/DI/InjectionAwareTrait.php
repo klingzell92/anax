@@ -20,10 +20,11 @@ trait InjectionAwareTrait
      *
      * @param Anax\DI\DIInterface $di a service container
      *
-     * @return $this
+     * @return self
      */
     public function setDI(DIInterface $di)
     {
         $this->di = $di;
+        return $this;
     }
 }

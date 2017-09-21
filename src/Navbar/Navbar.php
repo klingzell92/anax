@@ -5,10 +5,16 @@ namespace Anax\Navbar;
 /**
  * Navbar Class
  */
-class Navbar implements \Anax\Common\AppInjectableInterface, \Anax\Common\ConfigureInterface
+
+ use \Anax\Configure\ConfigureInterface;
+ use \Anax\Configure\ConfigureTrait;
+ use \Anax\DI\InjectionAwareInterface;
+ use \Anax\DI\InjectionAwareTrait;
+
+class Navbar implements \Anax\DI\InjectionAwareInterface, ConfigureInterface
 {
-    use \Anax\Common\AppInjectableTrait;
-    use \Anax\Common\ConfigureTrait;
+    use \Anax\DI\InjectionAwareTrait;
+    use ConfigureTrait;
 
     /**
      * Get HTML for the navbar.
@@ -21,9 +27,9 @@ class Navbar implements \Anax\Common\AppInjectableInterface, \Anax\Common\Config
         $html = "<ul>";
 
         foreach ($items["items"] as $value) {
-            $selected = $this->app->request->getRoute() == $value ?
+            $selected = $this->di->get("request")->getRoute() == $value ?
             "selected" : "";
-            $url = $this->app->url->create($value["route"]);
+            $url = $this->di->get("url")->create($value["route"]);
             $html.="<li class".$selected."><a href='".$url."'>".$value["text"]."</a></li>";
         }
         $html.="</ul>";

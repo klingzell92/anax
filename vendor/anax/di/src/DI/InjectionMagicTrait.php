@@ -6,7 +6,6 @@ use Anax\DI\Exception\Exception;
 
 /**
  * Trait to use for DI aware services to let them know of the current $di.
- *
  */
 trait InjectionMagicTrait
 {
@@ -58,7 +57,7 @@ trait InjectionMagicTrait
     private function find($service)
     {
         if (!$this->di) {
-            throw new Exception("InjectionAwareTrait \$di is not set. Call setDI()?");
+            throw new Exception("InjectionMagicTrait \$di is not set. Call setDI()?");
         }
 
         $this->$service = $this->di->get($service);

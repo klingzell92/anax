@@ -48,4 +48,28 @@ class DIFactoryConfigTest extends \PHPUnit_Framework_TestCase
         $session = $di->get($service);
         $this->assertInstanceOf('\stdClass', $session);
     }
+
+
+
+    /**
+     * Add and access a dummy service.
+     */
+    public function testDummyService()
+    {
+        $di = new DIFactoryConfigMagic("di.php");
+
+        $di->set("dummy", function () {
+            $obj = new DummyService();
+            return $obj;
+        });
+
+        $obj = $di->get("dummy");
+        $this->assertInstanceOf('\Anax\DI\DummyService', $obj);
+
+        $res = $di->get("dummy")->property;
+        $this->assertEquals("property", $res);
+
+        $res = $di->get("dummy")->method();
+        $this->assertEquals("method", $res);
+    }
 }
