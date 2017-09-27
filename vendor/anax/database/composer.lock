@@ -4,20 +4,21 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "d1352198ab4d69a0f03022a80781d100",
-    "packages": [
+    "content-hash": "cfbd32dea9fc5c4c95c3db0587edb908",
+    "packages": [],
+    "packages-dev": [
         {
             "name": "anax/common",
-            "version": "v1.0.4",
+            "version": "v1.0.13",
             "source": {
                 "type": "git",
                 "url": "https://github.com/canax/common.git",
-                "reference": "36ff73b09fd2d7ed08bbc91fa81d6f5afd610483"
+                "reference": "507714bd3bd913e2cf72340e907a7ae907d0cd60"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/canax/common/zipball/36ff73b09fd2d7ed08bbc91fa81d6f5afd610483",
-                "reference": "36ff73b09fd2d7ed08bbc91fa81d6f5afd610483",
+                "url": "https://api.github.com/repos/canax/common/zipball/507714bd3bd913e2cf72340e907a7ae907d0cd60",
+                "reference": "507714bd3bd913e2cf72340e907a7ae907d0cd60",
                 "shasum": ""
             },
             "require": {
@@ -30,7 +31,10 @@
             "autoload": {
                 "psr-4": {
                     "Anax\\": "src/"
-                }
+                },
+                "files": [
+                    "src/functions.php"
+                ]
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -53,10 +57,9 @@
                 "micro",
                 "mvc"
             ],
-            "time": "2017-03-08T10:11:17+00:00"
+            "time": "2017-08-10T15:25:00+00:00"
         }
     ],
-    "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": [],
@@ -65,7 +68,5 @@
     "platform": {
         "php": ">=5.6"
     },
-    "platform-dev": {
-        "php": ">=5.6"
-    }
+    "platform-dev": []
 }

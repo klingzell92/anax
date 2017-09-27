@@ -1,7 +1,3 @@
-#
-#
-#
-
 # ------------------------------------------------------------------------
 #
 # Generel stuff
@@ -39,10 +35,6 @@ HELPTEXT = $(ECHO) "$(ACTION)--->" `egrep "^\# target: $(1) " $(THIS_MAKEFILE) |
 #
 # Specifics
 #
-
-# Add local bin path for test tools
-#PATH := "./.bin:./vendor/bin:./node_modules/.bin:$(PATH)"
-#SHELL := env PATH=$(PATH) $(SHELL)
 BIN     := .bin
 PHPUNIT := $(BIN)/phpunit
 PHPLOC 	:= $(BIN)/phploc
@@ -78,7 +70,7 @@ prepare:
 
 
 # target: clean              - Removes generated files and directories.
-.PHONY:  clean
+.PHONY: clean
 clean:
 	@$(call HELPTEXT,$@)
 	rm -rf build
@@ -95,9 +87,9 @@ clean-cache:
 
 # target: clean-all          - Removes generated files and directories.
 .PHONY:  clean-all
-clean-all:
+clean-all: clean clean-cache
 	@$(call HELPTEXT,$@)
-	rm -rf .bin build vendor
+	rm -rf .bin vendor
 
 
 

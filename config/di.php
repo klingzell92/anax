@@ -16,7 +16,12 @@ return [
         ],
         "response" => [
             "shared" => true,
-            "callback" => "\Anax\Response\Response",
+            //"callback" => "\Anax\Response\Response",
+            "callback" => function () {
+                $obj = new \Anax\Response\ResponseUtility();
+                $obj->setDI($this);
+                return $obj;
+            }
         ],
         "url" => [
             "shared" => true,
@@ -61,9 +66,11 @@ return [
         ],
         "session" => [
             "shared" => true,
+            "active" => true,
             "callback" => function () {
                 $session = new \Anax\Session\SessionConfigurable();
                 $session->configure("session.php");
+                $session->start();
                 return $session;
             }
         ],
@@ -86,14 +93,6 @@ return [
                 $rem = new \Anax\RemServer\RemServerController();
                 $rem->setDI($this);
                 return $rem;
-            }
-        ],
-        "comment" => [
-            "shared" => true,
-            "callback" => function () {
-                $comment = new \Anax\Comment\Comment();
-                $comment->injectSession($this->get("session"));
-                return $comment;
             }
         ],
         "commentController" => [
@@ -141,6 +140,30 @@ return [
             "shared" => true,
             "callback" => function () {
                 $obj = new \Anax\Page\PageRender();
+                $obj->setDI($this);
+                return $obj;
+            }
+        ],
+        "bookController" => [
+            "shared" => true,
+            "callback" => function () {
+                $obj = new \Anax\Book\BookController();
+                $obj->setDI($this);
+                return $obj;
+            }
+        ],
+        "db" => [
+            "shared" => true,
+            "callback" => function () {
+                $obj = new \Anax\Database\DatabaseQueryBuilder();
+                $obj->configure("database.php");
+                return $obj;
+            }
+        ],
+        "userController" => [
+            "shared" => true,
+            "callback" => function () {
+                $obj = new \Anax\User\UserController();
                 $obj->setDI($this);
                 return $obj;
             }

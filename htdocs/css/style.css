@@ -155,3 +155,40 @@ p {
   font-weight: bold;
   font-size: 16px;
 }
+
+.htmlform {
+  border: 2px solid black;
+  border-radius: 4px;
+  padding: 1em;
+  margin-top: 1em;
+}
+
+.htmlform fieldset {
+    border: none;
+}
+
+.profile {
+  border: 2px solid black;
+  border-radius: 4px;
+  padding: 1em;
+  margin-top: 1em;
+  text-align: center;
+}
+
+.navButton {
+    width: 100%;
+    background-color: white;
+    border: 1px solid;
+    border-radius: 4px;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+}
+
+.navButton:hover {
+    text-decoration: none;
+}
+
+.textSection p {
+    display: inline-block;
+}

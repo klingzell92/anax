@@ -1,6 +1,23 @@
 Revision history
 =================================
 
+Notes for development v1.1.0*
+---------------------------------
+
+* Check organisation of tests.
+* Move slugify to static or trait?
+* Are all the set methods needed, replace by one getting array of config?
+* Rewrite asset, create, createRelative with Uri/UriBuilder class.
+
+
+v1.0.7 (2017-09-25)
+---------------------------------
+
+* Add config/url_clean.php to ease scaffolding of clean url.
+* Revert merge of Uri and put it into its own branch.
+* Remove composer.lock.
+
+
 v1.0.6 (2017-03-31)
 ---------------------------------
 
@@ -37,7 +54,6 @@ v1.0.1 (2017-03-07)
 ---------------------------------
 
 * Cleanup makefile.
->>>>>>> da6cc35a3c5cc9f4a77e8e2646d2d97a57d0059a
 
 
 v1.0.0 (2017-03-03)

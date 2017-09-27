@@ -20,6 +20,14 @@ return  [
         "remserver" => [
             "text" => "Remserver",
             "route" => "remserver",
+        ],
+        "book" => [
+            "text" => "Book",
+            "route" => "book",
+        ],
+        "login" => [
+            "text" => "Login",
+            "route" => "user/login",
         ]
     ]
 ];

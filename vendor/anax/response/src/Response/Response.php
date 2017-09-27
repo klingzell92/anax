@@ -8,17 +8,34 @@ namespace Anax\Response;
 class Response
 {
     /**
-    * Properties
-    *
+    * @var array $headers    set all headers to send.
+    * @var array $statusCode set statuscode to use.
+    * @var array $body       body to send with response.
     */
-    private $headers = [];  // Set all headers to send
-    private $statusCode;    // Set statuscode to use
-    private $body;          // Body to send with response
+    private $headers = [];
+    private $statusCode;
+    private $body;
 
 
 
     /**
-     * Set headers.
+     * @var array $validStatusCode these status codes are supported.
+     */
+    private $validStatusCode = [
+        "200" => "HTTP/1.1 200 OK",
+        "400" => "HTTP/1.1 400 Bad Request",
+        "403" => "HTTP/1.1 403 Forbidden",
+        "404" => "HTTP/1.1 404 Not Found",
+        "405" => "HTTP/1.1 405 Method Not Allowed",
+        "418" => "HTTP/1.1 418 I'm a teapot",
+        "500" => "HTTP/1.1 500 Internal Server Error",
+        "501" => "HTTP/1.1 501 Not Implemented",
+    ];
+
+
+
+    /**
+     * Set status code to be sent as part of headers.
      *
      * @param string $header type of header to set
      *
@@ -26,8 +43,7 @@ class Response
      */
     public function setStatusCode($value)
     {
-        $supportedValues = [200, 403, 404, 500];
-        if (!in_array($value, $supportedValues)) {
+        if (!array_key_exists($value, $this->validStatusCode)) {
             throw new Exception("Unsupported statuscode: $value");
         }
         $this->statusCode = $value;
@@ -72,17 +88,10 @@ class Response
      */
     public function sendHeaders()
     {
-        $statusHeader = [
-            "200" => "HTTP/1.1 200 OK",
-            "403" => "HTTP/1.1 403 Forbidden",
-            "404" => "HTTP/1.1 404 Not Found",
-            "500" => "HTTP/1.1 500 Internal Server Error"
-        ];
-
         $this->checkIfHeadersAlreadySent();
 
-        if (isset($statusHeader[$this->statusCode])) {
-            header($statusHeader[$this->statusCode]);
+        if (isset($this->statusCode)) {
+            header($this->validStatusCode[$this->statusCode]);
         }
 
         foreach ($this->headers as $header) {
@@ -180,6 +189,8 @@ class Response
      * @param string $url to redirect to
      *
      * @return void
+     *
+     * @SuppressWarnings(PHPMD.ExitExpression)
      */
     public function redirect($url)
     {

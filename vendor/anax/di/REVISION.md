@@ -1,6 +1,12 @@
 Revision history
 =================================
 
+v1.0.6 (2017-09-25)
+---------------------------------
+
+* Add config/di_anax-site-develop.php as a more complete setup of services to work with anax development.
+
+
 v1.0.5 (2017-09-14)
 ---------------------------------
 

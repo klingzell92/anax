@@ -5,8 +5,6 @@
 ?>
 
 <form action="<?= $post ?>" method="post" class="commentSection">
-  Email:<br>
-  <input type="text" name="email" class="input"><br>
   Kommentar:<br>
   <!--<input type="text" name="comment">!-->
   <textarea rows="4" cols="50" name="comment" class="input">
@@ -19,13 +17,19 @@ if ($comments) {
     foreach ($comments as $comment) :
 ?>
 <div class="comment">
-<img src="<?=$comment[2] ?>" class="gravatar"/>
+<img src="<?=$comment->gravatar ?>" class="gravatar"/>
 
-<p class="email"><?= $comment[1] ?></p>
+<p class="email"><?= $comment->user ?></p>
 
-<p><?= $comment[3]?></p>
-<a href="<?= $delete."/$comment[0]" ?>"> Ta bort </a>
-<a href="<?= $edit."/$comment[0]" ?>"> Redigera </a>
+<p><?= $comment->content?></p>
+<?php
+if ($di->get("session")->get("username") == $comment->user || $di->get("session")->has("admin") ) {
+?>
+<a href="<?= $delete."/$comment->id" ?>"> Ta bort </a>
+<a href="<?= $edit."/$comment->id" ?>"> Redigera </a>
+<?php
+}
+ ?>
 </div>
 <?php
     endforeach;

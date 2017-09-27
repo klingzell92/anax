@@ -5,11 +5,11 @@
 
 <form action="<?= $save ?>" method="post" class="commentSection">
   Email:<br>
-  <input type="text" name="email" class="input" value="<?= $values[1] ?>"><br>
+  <input type="text" name="user" class="input" value="<?= $values->user ?>"><br>
   Kommentar:<br>
   <textarea rows="4" cols="50" name="comment" class="input">
-<?= $values[3] ?>
+<?= $values->content ?>
   </textarea>
-  <input type="hidden" name="id" value="<?= $values[0] ?>">
+  <input type="hidden" name="id" value="<?= $values->id ?>">
   <input type="submit" value="Spara ändringar" class="formButton">
 </form>

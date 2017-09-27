@@ -4,6 +4,7 @@ namespace Anax\Comment;
 
 use \Anax\DI\InjectionAwareInterface;
 use \Anax\DI\InjectionAwareTrait;
+use \Anax\Comment\Comment;
 
 /**
  * A controller for the Comment module
@@ -22,6 +23,7 @@ class CommentController implements InjectionAwareInterface
      *
      * @return void
      */
+     /*
     public function start()
     {
 
@@ -33,7 +35,7 @@ class CommentController implements InjectionAwareInterface
         }
         $this->started = true;
     }
-
+    */
 
 
     /**
@@ -41,11 +43,12 @@ class CommentController implements InjectionAwareInterface
      *
      * @return void
      */
+     /*
     public function destroy()
     {
         $this->di->get("session")->destroy();
         exit;
-    }
+    }*/
 
 
 
@@ -57,11 +60,14 @@ class CommentController implements InjectionAwareInterface
      */
     public function postComment()
     {
-        $email = getPost("email");
-        $comment = getPost("comment");
-        $gravatar = "https://www.gravatar.com/avatar/" . $this->di->get("comment")->convertEmail(getPost("email"));
-        $this->di->get("comment")->addComment($email, $comment, $gravatar);
-        $this->showComments();
+        $session = $this->di->get("session");
+        $comment = new Comment();
+        $comment->setDb($this->di->get("db"));
+        $username = $session->get("username");
+        $content = getPost("comment");
+        $gravatar = "https://www.gravatar.com/avatar/" . $comment->convertEmail($session->get("email"));
+        $comment->addComment($username, $content, $gravatar);
+        $this->di->get("response")->redirect("comment");
     }
 
     /**
@@ -69,11 +75,14 @@ class CommentController implements InjectionAwareInterface
      *
      * @return array
      */
+
     public function showComments()
     {
-        $this->start();
+        //$this->start();
+        $comment = new Comment();
+        $comment->setDb($this->di->get("db"));
         $this->di->get("view")->add("comment/comment", [
-         "comments" => $this->di->get("comment")->getComments()
+         "comments" => $comment->findAll()
         ]);
 
        // Render a standard page using layout
@@ -92,8 +101,10 @@ class CommentController implements InjectionAwareInterface
 
     public function showEdit($postId)
     {
+        $comment = new Comment();
+        $comment->setDb($this->di->get("db"));
         $this->di->get("view")->add("comment/edit", [
-         "values" => $this->di->get("comment")->getPostValues($postId)
+         "values" => $comment->find("id", $postId)
         ]);
 
        // Render a standard page using layout
@@ -107,14 +118,18 @@ class CommentController implements InjectionAwareInterface
      *
      * @return void
      */
+
     public function saveEdit()
     {
+        $session = $this->di->get("session");
+        $comment = new Comment();
+        $comment->setDb($this->di->get("db"));
         $id = getPost("id");
-        $email = getPost("email");
-        $comment = getPost("comment");
-        $gravatar = "https://www.gravatar.com/avatar/" . $this->di->get("comment")->convertEmail(getPost("email"));
-        $this->di->get("comment")->updateComment($id, $email, $comment, $gravatar);
-        $this->showComments();
+        $user = getPost("user");
+        $content = getPost("comment");
+        $gravatar = "https://www.gravatar.com/avatar/" . $comment->convertEmail($session->get("email"));
+        $comment->updateComment($id, $user, $content, $gravatar);
+        $this->di->get("response")->redirect("comment");
     }
 
     /**
@@ -127,7 +142,10 @@ class CommentController implements InjectionAwareInterface
 
     public function deletePost($postId)
     {
-        $this->di->get("comment")->deletePost($postId);
-        $this->showComments();
+        $comment = new Comment();
+        $comment->setDb($this->di->get("db"));
+        $comment->deletePost($postId);
+        $this->di->get("response")->redirect("comment");
     }
+
 }

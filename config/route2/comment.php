@@ -7,12 +7,12 @@ return [
             "path" => "",
             "callable" => ["commentController", "showComments"],
         ],
-        [
+        /*[
             "info" => "Start session",
             "requestMethod" => null,
             "path" => "**",
             "callable" => ["commentController", "start"],
-        ],
+        ],*/
         [
             "info" => "Delete Post",
             "requestMethod" => "get",

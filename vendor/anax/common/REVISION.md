@@ -1,6 +1,42 @@
 Revision history
 =================================
 
+v1.0.19 (2017-09-25)
+---------------------------------
+
+* Enhance scaffolding and add template files.
+
+
+v1.0.18 (2017-09-25)
+---------------------------------
+
+* Fix extra/Makefile to create htdocs/img.
+
+
+v1.0.17 (2017-09-25)
+---------------------------------
+
+* Enhance extra/Makefile to create cache directory for cimage.
+
+
+v1.0.16 (2017-09-25)
+---------------------------------
+
+* Add extra/htdocs for faster setup in scaffolding.
+
+
+v1.0.15 (2017-09-25)
+---------------------------------
+
+* Fix extra/Makefile to create htdocs/img in target cimage-update.
+
+
+v1.0.14 (2017-09-25)
+---------------------------------
+
+* Add extra/Makefile for modules, could replace Makefile.anax.
+
+
 v1.0.13 (2017-08-10)
 ---------------------------------
 

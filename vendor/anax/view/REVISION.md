@@ -2,6 +2,30 @@ Revision history
 =================================
 
 
+v1.0.21 (2017-09-14)
+---------------------------------
+
+* Do not remove variable data when sending data to view.
+
+
+v1.0.20 (2017-09-12)
+---------------------------------
+
+* Fix helper renderView and add tests.
+
+
+v1.0.19 (2017-09-11)
+---------------------------------
+
+* Move book views to scaffold dir.
+
+
+v1.0.18 (2017-09-10)
+---------------------------------
+
+* Improve formatting of view/default2/info.php.
+
+
 v1.0.17 (2017-09-07)
 ---------------------------------
 
