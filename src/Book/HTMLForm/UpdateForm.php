@@ -20,7 +20,7 @@ class UpdateForm extends FormModel
     public function __construct(DIInterface $di, $id)
     {
         parent::__construct($di);
-        $book = $this->getItemHasDetails($id);
+        $book = $this->hasGetItemDetails($id);
         $this->form->create(
             [
                 "id" => __CLASS__,
@@ -68,7 +68,7 @@ class UpdateForm extends FormModel
      *
      * @return boolean true if okey, false if something went wrong.
      */
-    public function getItemHasDetails($id)
+    public function hasGetItemDetails($id)
     {
         $book = new Book();
         $book->setDb($this->di->get("db"));

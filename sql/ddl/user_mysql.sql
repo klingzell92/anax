@@ -11,7 +11,7 @@
 --
 -- DROP DATABASE anaxdb;
 -- CREATE DATABASE IF NOT EXISTS anaxdb;
-USE anaxdb;
+USE phkl16;
 
 
 
@@ -34,6 +34,7 @@ DROP TABLE IF EXISTS User;
 CREATE TABLE User (
     `id` INTEGER PRIMARY KEY AUTO_INCREMENT NOT NULL,
     `acronym` VARCHAR(80) UNIQUE NOT NULL,
+    `email` VARCHAR(80) NOT NULL,
     `password` VARCHAR(255) NOT NULL,
     `created` DATETIME,
     `updated` DATETIME,

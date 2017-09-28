@@ -67,5 +67,4 @@ class User extends ActiveRecordModel
         $data = $this->find("acronym", $acronym);
         return $data;
     }
-    
 }

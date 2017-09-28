@@ -42,8 +42,7 @@ class UserController implements
     public function getIndex()
     {
         $session = $this->di->get("session");
-        if ($session->has("username"))
-        {
+        if ($session->has("username")) {
             $user = new User();
             $user->setDb($this->di->get("db"));
             $title      = "Profile";
@@ -151,7 +150,7 @@ class UserController implements
     public function logoutUser()
     {
         $this->di->get("session")->destroy();
-        $this->getPostLogin();
+        $this->di->get("response")->redirect("user/login");
     }
 
     /**
@@ -162,7 +161,6 @@ class UserController implements
     public function getAdminIndex()
     {
         if ($this->di->get("session")->has("admin")) {
-
             $title      = "Admin";
             $user       = new User();
             $user->setDb($this->di->get("db"));
@@ -177,8 +175,7 @@ class UserController implements
             $view->add("user/admin", $data);
 
             $pageRender->renderPage(["title" => $title]);
-        }
-        else {
+        } else {
             $this->di->get("response")->redirect("user/profile");
         }
     }
@@ -197,8 +194,7 @@ class UserController implements
             $user->setDb($this->di->get("db"));
             $user->delete($id);
             $this->di->get("response")->redirect("user/admin");
-        }
-        else {
+        } else {
             $this->di->get("response")->redirect("user/profile");
         }
     }

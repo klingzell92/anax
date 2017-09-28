@@ -23,7 +23,7 @@ class UserLoginForm extends FormModel
         $this->form->create(
             [
                 "id" => __CLASS__,
-                "legend" => "User Login"
+                "legend" => "Logga in"
             ],
             [
                 "user" => [
@@ -84,9 +84,9 @@ class UserLoginForm extends FormModel
         $res = $user->verifyPassword($acronym, $password);
 
         if (!$res) {
-           $this->form->rememberValues();
-           $this->form->addOutput("Fel användarnamn eller lösenord");
-           return false;
+            $this->form->rememberValues();
+            $this->form->addOutput("Fel användarnamn eller lösenord");
+            return false;
         }
 
         //$this->form->addOutput("User " . $user->acronym . " logged in.");

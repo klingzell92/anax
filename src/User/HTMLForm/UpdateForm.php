@@ -28,6 +28,13 @@ class UpdateForm extends FormModel
             ],
             [
 
+
+                "id" => [
+                    "type" => "text",
+                    "validation" => ["not_empty"],
+                    "readonly" => true,
+                    "value" => $user->id,
+                ],
                 "user" => [
                     "type" => "text",
                     "validation" => ["not_empty"],
@@ -42,6 +49,7 @@ class UpdateForm extends FormModel
 
                 "password" => [
                     "type"        => "password",
+                    "placeholder" => "Lämna tomt för att inte uppdatera lösenord",
                 ],
 
                 "password-again" => [
@@ -95,7 +103,7 @@ class UpdateForm extends FormModel
         $passwordAgain = $this->form->value("password-again");
 
         // Check password matches
-        if ($password !== $passwordAgain ) {
+        if ($password !== $passwordAgain) {
             $this->form->rememberValues();
             $this->form->addOutput("Password did not match.");
             return false;
@@ -109,7 +117,8 @@ class UpdateForm extends FormModel
         //    ->execute([$acronym, $password]);
         $user = new User();
         $user->setDb($this->di->get("db"));
-
+        //var_dump($id);
+        $user->find("id", $this->form->value("id"));
         $user->acronym = $acronym;
         $user->email = $email;
         if ($password == null) {
@@ -121,7 +130,7 @@ class UpdateForm extends FormModel
 
         $user->save();
 
-        $this->form->addOutput("User was created.");
+        $this->form->addOutput("Användaren uppdaterades");
         return true;
     }
 }

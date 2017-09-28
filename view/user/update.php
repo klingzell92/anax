@@ -5,12 +5,13 @@ $admin = $di->get("url")->create("user/admin");
 ?>
 
 <h1>Updatera användare</h1>
-
+<div class="form">
 <?= $form ?>
 
-<p>
-    <a href="<?= $profile ?>" class="navButton">Profil</a>
-</p>
+
+<a href="<?= $profile ?>" class="navButton">Profil</a>
+
 <?php if ($di->get("session")->has("admin")) {?>
     <a href="<?=$admin?>" class="navButton">Admin</a>
 <?php } ?>
+</div>

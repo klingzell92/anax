@@ -87,3 +87,29 @@ Fast jag väntar till nästa kmom med att implementera det.
 ##Allmänna kommentarer kring din me-sida och dess kodstruktur?
 Om man jämför med hur koden var ifrån början och hur min kod har vart tidigare så har det defenetivt blivit bättre.
 Det blev mycket bättre struktur på koden när jag refaktorerade om koden till att följa MVC i förra kursmomentet. Jag kanske har kod som skulle behöva struktureras om men det får duga som det är just nu.
+
+Kmom04
+=========================
+
+##Hur gick det att integrera formulärhantering och databashantering i ditt kommentarssystem?
+Jag hade inga större problem med detta utan jag kollade hur man skulle göra i bok artiklarna och sen anpassade jag det till min kod.
+Jag var tvungen att skriva om ganska mycket kod i min modelklass för kommentarssystemet. Detta var för att jag ville använda mig utav Active Record när jag sparade till databasen och jag sprade tidigare till sessionen.
+Den nya formulärhanteringen tyckte jag var bra då de var så kallade self submitting forms vilket gör att man slipper skriva en handler för formulären. Jag fick med alla kraven för uppgiften så det går att som admin redigera och ta bort både kommentarer och användare.
+
+##Berätta om din syn på Active record och liknande upplägg, ser du fördelar och nackdelar?
+Just Active Record tycker jag om att använda då man t.ex. inte varje gång man skall använda databasen behöver connecta till den utan att detta görs på ett annat ställa i koden.
+Jag tyckte om att man inte behövde skriva sql frågor i sin php kod. Jag ser nog mest fördelar med detta upplägg och behövde trotts att jag inte använt detta tidigare inte använda ren sql kod någon gång utan klarade av att göra allt jag behövde med Active Record.
+
+##Utveckla din syn på koden du nu har i ramverket och din kommentars- och användarkod. Hur känns det?
+Jag är överlag nöjd med koden som jag har i ramverket nu. Koden är bra strukturerad enligt MVC men nu när jag har infört användarkoden så har jag kanske lite väl mycket kod i vyerna.
+Detta är för att bl.a. på loginsidan vill jag att det skall se anorlunda ut beroende på om man är inloggad eller ej och då löste jag detta i vyn. Det går säkert att lösa på något annat sätt i t.ex. controllern men för tillfället får det duga.
+Sedan finns det säkert mer kod som skulle behöva skrivas om men det får jag i så fall göra vid ett senare tillfälle.
+
+##Om du vill, och har kunskap om, kan du även berätta om din syn på ORM och designmönstret Data Mapper som är närbesläktade med Active Record. Du kanske har erfarenhet av likande upplägg i andra sammanhang?
+Då jag inte har nog med kunskap om varker ORM eller Data Mapper så väljer jag att inte skriva något om detta.
+
+##Vad tror du om begreppet scaffolding, kan det vara något att kika mer på?
+Det var väldigt smidigt att använda sig utav scaffolding då det gick snabbt att integrera en stor del kod i Anax. Det känns absolut som något som skulle vara värt att kika mer på.
+Om man t.ex. har kod som man ofta använder i sina projekt så skulle det nog vara skönt att kunna scaffolda in den koden.
+
+Det finns två användare inlagda det är doe - doe och admin - admin.

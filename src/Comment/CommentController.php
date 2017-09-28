@@ -147,5 +147,4 @@ class CommentController implements InjectionAwareInterface
         $comment->deletePost($postId);
         $this->di->get("response")->redirect("comment");
     }
-
 }

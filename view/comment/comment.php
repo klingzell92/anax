@@ -23,13 +23,13 @@ if ($comments) {
 
 <p><?= $comment->content?></p>
 <?php
-if ($di->get("session")->get("username") == $comment->user || $di->get("session")->has("admin") ) {
+if ($di->get("session")->get("username") == $comment->user || $di->get("session")->has("admin")) {
 ?>
 <a href="<?= $delete."/$comment->id" ?>"> Ta bort </a>
 <a href="<?= $edit."/$comment->id" ?>"> Redigera </a>
 <?php
 }
- ?>
+    ?>
 </div>
 <?php
     endforeach;
