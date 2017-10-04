@@ -95,14 +95,6 @@ return [
                 return $rem;
             }
         ],
-        "commentController" => [
-            "shared" => false,
-            "callback" => function () {
-                $commentController = new \Anax\Comment\CommentController();
-                $commentController->setDI($this);
-                return $commentController;
-            }
-        ],
         "navbar" => [
             "shared" => false,
             "callback" => function () {
@@ -158,6 +150,14 @@ return [
                 $obj = new \Anax\Database\DatabaseQueryBuilder();
                 $obj->configure("database.php");
                 return $obj;
+            }
+        ],
+        "commentController" => [
+            "shared" => false,
+            "callback" => function () {
+                $commentController = new \Anax\Comment\CommentController();
+                $commentController->setDI($this);
+                return $commentController;
             }
         ],
         "userController" => [

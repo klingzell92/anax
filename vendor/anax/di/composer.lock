@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "anax/configure",
-            "version": "v1.0.0",
+            "version": "v1.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/canax/configure.git",
-                "reference": "fdcac4f818c0331a06c83740e7eba99e2306ee9f"
+                "reference": "81b7ebf49c13cd5d96453737acea8b3352e1a1ef"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/canax/configure/zipball/fdcac4f818c0331a06c83740e7eba99e2306ee9f",
-                "reference": "fdcac4f818c0331a06c83740e7eba99e2306ee9f",
+                "url": "https://api.github.com/repos/canax/configure/zipball/81b7ebf49c13cd5d96453737acea8b3352e1a1ef",
+                "reference": "81b7ebf49c13cd5d96453737acea8b3352e1a1ef",
                 "shasum": ""
             },
             "require": {
@@ -50,7 +50,7 @@
                 "micro",
                 "mvc"
             ],
-            "time": "2017-05-04T08:43:29+00:00"
+            "time": "2017-09-26T17:53:23+00:00"
         }
     ],
     "packages-dev": [],

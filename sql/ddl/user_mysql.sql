@@ -10,8 +10,8 @@
 -- Create a database for test
 --
 -- DROP DATABASE anaxdb;
--- CREATE DATABASE IF NOT EXISTS anaxdb;
-USE phkl16;
+CREATE DATABASE IF NOT EXISTS anaxdb;
+USE anaxdb;
 
 
 
@@ -41,3 +41,5 @@ CREATE TABLE User (
     `deleted` DATETIME,
     `active` DATETIME 
 ) ENGINE INNODB CHARACTER SET utf8 COLLATE utf8_swedish_ci;
+SELECT * FROM User;
+DELETE FROM User WHERE id = 7;

@@ -10,8 +10,8 @@
 -- Create a database for test
 --
 -- DROP DATABASE anaxdb;
--- CREATE DATABASE IF NOT EXISTS anaxdb;
-USE phkl16;
+CREATE DATABASE IF NOT EXISTS anaxdb;
+USE anaxdb;
 
 
 

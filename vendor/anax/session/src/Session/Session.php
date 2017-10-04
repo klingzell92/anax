@@ -4,14 +4,13 @@ namespace Anax\Session;
 
 /**
  * Class for wrapping sessions.
- *
  */
-class Session
+class Session implements SessionInterface
 {
     /**
      * Set a session name.
      *
-     * @param array $name to set as session name.
+     * @param string $name to set as session name.
      *
      * @return self
      */

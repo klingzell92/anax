@@ -1,6 +1,18 @@
 Revision history
 =================================
 
+v1.0.8 (2017-09-26)
+---------------------------------
+
+* Minor rewrite of DIFactoryConfig::configure().
+
+
+v1.0.7 (2017-09-26)
+---------------------------------
+
+* DIFactoryConfig now uses Config2Trait that allows to read configuration items from both files and from a directory containing files.
+
+
 v1.0.6 (2017-09-25)
 ---------------------------------
 

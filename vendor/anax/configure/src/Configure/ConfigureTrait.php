@@ -11,7 +11,7 @@ trait ConfigureTrait
     /**
      * @var [] $config store the configuration in this array.
      */
-    private $config = [];
+    protected $config = [];
 
 
 
@@ -61,7 +61,8 @@ trait ConfigureTrait
 
 
     /**
-     * Helper function for reading values from the configuration.
+     * Helper function for reading values from the configuration and appy
+     * default values where configuration item is missing.
      *
      * @param string $key     matching a key in the config array.
      * @param string $default value returned when config item is not found.

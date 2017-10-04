@@ -20,6 +20,7 @@
         "anax/di": "^1.0",
         "anax/page": "^1.0",
         "anax/database": "^1.1",
-        "anax/htmlform": "^1.0"
+        "anax/htmlform": "^1.0",
+        "phkl16/comment": "^1.3"
     }
 }
