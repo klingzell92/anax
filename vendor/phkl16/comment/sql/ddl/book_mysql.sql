@@ -1,5 +1,5 @@
 --
--- Creating a User table and inserting example users.
+-- Creating a small Book table.
 -- Create a database and a user having access to this database,
 -- this must be done by hand, se commented rows on how to do it.
 --
@@ -10,8 +10,8 @@
 -- Create a database for test
 --
 -- DROP DATABASE anaxdb;
-CREATE DATABASE IF NOT EXISTS anaxdb;
-USE anaxdb;
+-- CREATE DATABASE IF NOT EXISTS anaxdb;
+USE phkl16;
 
 
 
@@ -28,17 +28,11 @@ SET NAMES utf8;
 
 
 --
--- Table User
+-- Table Book
 --
-DROP TABLE IF EXISTS User;
-CREATE TABLE User (
+DROP TABLE IF EXISTS Book;
+CREATE TABLE Book (
     `id` INTEGER PRIMARY KEY AUTO_INCREMENT NOT NULL,
-    `acronym` VARCHAR(80) UNIQUE NOT NULL,
-    `email` VARCHAR(80) NOT NULL,
-    `password` VARCHAR(255) NOT NULL,
-    `created` DATETIME,
-    `updated` DATETIME,
-    `deleted` DATETIME,
-    `active` DATETIME 
+    `title` VARCHAR(80) NOT NULL,
+    `author` VARCHAR(80) NOT NULL
 ) ENGINE INNODB CHARACTER SET utf8 COLLATE utf8_swedish_ci;
-SELECT * FROM User;

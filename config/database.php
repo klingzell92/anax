@@ -11,7 +11,7 @@
  * Example for SQLite.
  *  "dsn" => "sqlite:memory::",
  */
- 
+ /*
 return [
     "dsn"             => "mysql:host=blu-ray.student.bth.se;dbname=phkl16;",
     "username"        => "phkl16",
@@ -27,7 +27,7 @@ return [
     // True to be verbose on connection failed
     "debug_connect"   => true,
 ];
-/*
+*/
 return [
     "dsn"             => "mysql:host=localhost;dbname=anaxdb;",
     "username"        => "anax",
@@ -41,4 +41,3 @@ return [
     // True to be verbose on connection failed
     "debug_connect"   => false,
 ];
-*/

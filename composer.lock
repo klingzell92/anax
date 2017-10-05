@@ -931,16 +931,16 @@
         },
         {
             "name": "phkl16/comment",
-            "version": "v1.3.0",
+            "version": "1.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/klingzell92/Comment.git",
-                "reference": "f68e7e20bbfcd738249505f75c04990e57e0c7f3"
+                "reference": "8e94cc0ae857ecd617498ec915ddb507ecedcb28"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/klingzell92/Comment/zipball/f68e7e20bbfcd738249505f75c04990e57e0c7f3",
-                "reference": "f68e7e20bbfcd738249505f75c04990e57e0c7f3",
+                "url": "https://api.github.com/repos/klingzell92/Comment/zipball/8e94cc0ae857ecd617498ec915ddb507ecedcb28",
+                "reference": "8e94cc0ae857ecd617498ec915ddb507ecedcb28",
                 "shasum": ""
             },
             "require": {
@@ -985,7 +985,7 @@
                 "micro",
                 "mvc"
             ],
-            "time": "2017-10-04T19:18:45+00:00"
+            "time": "2017-10-05T14:06:02+00:00"
         },
         {
             "name": "scrivo/highlight.php",

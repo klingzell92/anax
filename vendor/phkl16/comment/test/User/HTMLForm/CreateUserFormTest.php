@@ -2,7 +2,6 @@
 
 namespace Anax\User\HTMLForm;
 
-
 /**
  * Test cases for class CommentController.
  */
